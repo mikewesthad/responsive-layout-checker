@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/mikewesthad/responsive-layout-checker/issues"
   },
-  "homepage": "https://github.com/mikewesthad/responsive-layout-checker#readme"
+  "homepage": "https://github.com/mikewesthad/responsive-layout-checker#readme",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "date-format": "0.0.2",
+    "pageres": "^3.0.2",
+    "slugify-url": "^1.2.0"
+  }
 }
