@@ -1,0 +1,19 @@
+{
+  "name": "responsive-layout-checker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikewesthad/responsive-layout-checker.git"
+  },
+  "author": "Michael Hadley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mikewesthad/responsive-layout-checker/issues"
+  },
+  "homepage": "https://github.com/mikewesthad/responsive-layout-checker#readme"
+}
