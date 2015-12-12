@@ -1,6 +1,6 @@
-/*
-	A small command line interface to check the responsive website layouts that
-	stores a series of snapshots in ./renders/timestamp-url/
+/* 
+	A small command line interface to check the responsive website layouts by
+	rendering a series of snapshots in ./renders/timestamp-url/
 
 	node app.js --help for usage information
 
@@ -16,12 +16,13 @@ var program = require("commander");
 program
 	.version("1.0.0")
 	.usage("node app.js --url www.google.com")
-	.option("-u, --url <path>", "Url to render")
-	.option("-c, --crop", "Crop the screenshots to the first page")
+	.option("-u, --url <path>", "url to render, required")
+	.option("-c, --crop", "crop the screenshots to the first page, default false")
+	.option("-d, --delay [n]", "time (in s) to delay before taking a screenshot, default 2", 2)
 	.parse(process.argv);
 if (!program.url) {
 	console.log("A url is required for this script to run.")
-	process.exit(0);
+	program.help();
 }
 
 // Determine output directory
@@ -35,7 +36,7 @@ var outputDirectory = require("path").join(__dirname, "renders", filename);
 // Take screenshots of website
 var Pageres = require("pageres");
 var options = {
-	delay: 2,
+	delay: program.delay,
 	crop: program.crop,
 	filename: "<%= date %>-<%= size %>-<%= time %>-<%= crop %>",
 	scale: 1,
