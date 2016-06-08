@@ -19,7 +19,7 @@
   "dependencies": {
     "commander": "^2.9.0",
     "date-format": "0.0.2",
-    "pageres": "^3.0.2",
+    "pageres": "^4.1.2",
     "slugify-url": "^1.2.0"
   }
 }
